@@ -34,19 +34,41 @@ public class Program
     }
   }
 
+
+  public static void StringPalindrome(string word)
+  {
+    string result = "";
+    for (int i = word.Length-1; i >= 0; i--)
+    {
+      result += word[i];
+    }
+    Console.WriteLine(word + " " + result);
+
+
+
+    if (word == result)
+    {
+      Console.WriteLine(word + " is a palindrome!!");
+    }
+    else
+    {
+      Console.WriteLine(word + " is NOT a palindrome");
+    }
+
+  }
+
+
   public static void Main()
   {
     Console.WriteLine("Input a word and see if its a palindrome!");
     string word = Console.ReadLine();
     CharPalindrome(word);
 
-    // Console.WriteLine(reverseWord.GetValue(0));
-    // reverseWord[0] = Array.Reverse(arrayWord[0]);
-    // Console.WriteLine(reverseWord.GetValue(0));
-    // if (arrayWord == reverseWord)
-    // {
-    //   Console.WriteLine("this is a palindrome");
-    // }
+    StringPalindrome(word);
+
+
+
+
 
 
   }
